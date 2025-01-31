@@ -1,0 +1,37 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% G is a DFA that contain uncertain cycle, so to verify the diagnosability
+% it is necessary check if the uncertain cycles are determinate or not.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% G correspond to DFA in fig 6.8 of notes:
+% - it has one uncertain cycle between state 1 and 2. 
+% - the uncertain cycle is determinate 
+% - G in diagnosable 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% States number
+3
+
+% Alphabet
+a b c uf
+
+% Observable events
+a b c
+
+% Unobservable events
+uf
+
+% Fault events
+uf
+
+% Transitions (initial_state symbol destination state)
+1 a 2
+2 b 1
+1 uf 3
+2 uf 3
+3 a 3
+
+% Initial States
+1
+
+% Final States
+-
